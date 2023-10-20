@@ -1,0 +1,152 @@
+/* CSS Variables */
+
+:root {
+    /* Colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --background: hsl(217, 54%, 11%);
+    --card: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --ff: 'Outfit', sans-serif;
+    --fs-p: 18px;
+    --fw-1: 300;
+    --fw-2: 400;
+    --fw-3: 600;
+}
+
+/* General Styling */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--soft-blue);
+    font-family: var(--ff);
+    font-weight: var(--fw-1);
+    font-size: var(--fs-p);
+    min-height: 100vh;
+}
+
+/* Card Styling */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    width: clamp(290px, 90vw, 350px);
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 10px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.card__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__view-icon {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+.card__img-container:hover .card__view-icon {
+    opacity: 1;
+}
+
+.card__blue-square {
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+}
+
+.card__img-container:hover .card__blue-square {
+    opacity: 0.5;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: var(--fw-3);
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.card__description {
+    margin-bottom: 0;
+}
+
+.card__title:hover {
+    color: var(--cyan);
+}
+
+.card__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__time-container,
+.card__price-container {
+    display: flex;
+    align-items: center;
+}
+
+.card__price {
+    color: var(--cyan);
+    font-weight: var(--fw-3);
+    margin-left: 5px;
+}
+
+.card__timeleft {
+    margin-left: 5px;
+    font-weight: var(--fw-2);
+}
+
+.card__creator-container {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--line);
+    font-size: 0.9rem;
+    padding-top: 5px;
+}
+
+.card__creator-img {
+    height: 25px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card__creator-name {
+    font-weight: var(--fw-2);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.card__creator-name:hover {
+    color: var(--cyan);
+}
+
