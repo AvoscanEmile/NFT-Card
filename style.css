@@ -45,7 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--card);
-    width: clamp(290px, 90vw, 350px);
+    width: clamp(290px, 90vw, 400px);
     padding: 1.25rem;
     border-radius: 10px;
     box-shadow: 0 20px 10px 10px hsla(0, 0%, 0%, 0.1);
@@ -87,7 +87,7 @@ body {
 }
 
 .card__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: var(--fw-3);
     text-decoration: none;
     color: var(--white);
@@ -129,7 +129,6 @@ body {
     display: flex;
     align-items: center;
     border-top: 2px solid var(--line);
-    font-size: 0.9rem;
     padding-top: 5px;
 }
 
