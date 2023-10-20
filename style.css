@@ -133,7 +133,7 @@ body {
 }
 
 .card__creator-img {
-    height: 25px;
+    height: 35px;
     border: 2px solid var(--white);
     border-radius: 50%;
     margin-right: 10px;
